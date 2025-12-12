@@ -1,31 +1,29 @@
 # TEST DATA - Do not modify
-account_holder = "Taylor Banks"
-starting_balance = 487
-withdrawal_amount = 120
-atm_fee = 3
-monthly_fee = 15
-months_inactive = 8
+creator_name = "DigitalDreamer"
+current_followers = 4567
+starting_followers = 2100
+days_tracked = 45
+milestone_increment = 1000
 
 # YOUR CODE BELOW THIS LINE
-# Calculate remaining balance after fees and withdrawal
-# Calculate how many full $20 bills and remaining dollars
+# Calculate follower statistics and milestone progress
 
-# Subtract withdrawal from balance
-balance = starting_balance
-balance -= withdrawal_amount
+# Calculate milestone progress
+current_milestone = current_followers // milestone_increment
+progress_in_milestone = current_followers % milestone_increment
+# Calculate growth statistics
+total_gained = current_followers - starting followers
+daily_average = total_gained // days_tracked
 
-# Subtract ATM fee
-balance -= atm_fee
-# Calculate and subtract total monthly fees
-total_monthly_fees = monthly_fee * months_inactive
-balance -= total_monthly_fees
-
-# Calculate full $20 bills and remaining dollars
-full_twenties = balance // 20
-remaining_dollars = balance % 20
+# Calculate projections
+days_to_milestone = (milestone_increment -  progress_in_milestone) // daily_average
+weekly_growth = daily_average * 7
 
 # Display results with f-strings
-print(f"Account Holder: {account_holder}")
-print(f"Remaining Balance: ${balance}")
-print(f"Full $20 Bills: {full_twenties}")
-print(f"Remaining Dollars: ${remaining_dollars}")
+print(f"Creator: {creator_name}")
+print(f"Current Milestone: {current_milestone}")
+print(f"Progress in Milestone: {progress_in_milestone} followers")
+print(f"Total Growth: {total_gained} followers")
+print(f"Daily Average: {daily_average} followers")
+print(f"Days to Next Milestone: {days_to_milestone} days")
+print(f"Weekly Growth Projection: {weekly_growth} followers")
